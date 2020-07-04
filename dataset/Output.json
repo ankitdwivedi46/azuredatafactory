@@ -1,0 +1,26 @@
+{
+	"name": "Output",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "InputOutputConnection",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FolderName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": ""
+		},
+		"schema": []
+	}
+}

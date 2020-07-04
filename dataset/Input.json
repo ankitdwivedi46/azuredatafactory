@@ -1,0 +1,136 @@
+{
+	"name": "Input",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "InputOutputConnection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "100 Records.csv",
+				"folderPath": "Input",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": ""
+		},
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
+	}
+}
