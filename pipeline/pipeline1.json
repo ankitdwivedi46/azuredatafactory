@@ -1,0 +1,507 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.FolderNames",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "Copy data1",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "AzureBlobStorageReadSettings",
+										"recursive": true
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
+									}
+								},
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobStorageWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"mappings": [
+										{
+											"source": {
+												"name": "Emp ID",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 1
+											}
+										},
+										{
+											"source": {
+												"name": "Name Prefix",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 2
+											}
+										},
+										{
+											"source": {
+												"name": "First Name",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 3
+											}
+										},
+										{
+											"source": {
+												"name": "Middle Initial",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 4
+											}
+										},
+										{
+											"source": {
+												"name": "Last Name",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 5
+											}
+										},
+										{
+											"source": {
+												"name": "Gender",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 6
+											}
+										},
+										{
+											"source": {
+												"name": "E Mail",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 7
+											}
+										},
+										{
+											"source": {
+												"name": "Father's Name",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 8
+											}
+										},
+										{
+											"source": {
+												"name": "Mother's Name",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 9
+											}
+										},
+										{
+											"source": {
+												"name": "Mother's Maiden Name",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 10
+											}
+										},
+										{
+											"source": {
+												"name": "Date of Birth",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 11
+											}
+										},
+										{
+											"source": {
+												"name": "Time of Birth",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 12
+											}
+										},
+										{
+											"source": {
+												"name": "Age in Yrs.",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 13
+											}
+										},
+										{
+											"source": {
+												"name": "Weight in Kgs.",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 14
+											}
+										},
+										{
+											"source": {
+												"name": "Date of Joining",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 15
+											}
+										},
+										{
+											"source": {
+												"name": "Quarter of Joining",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 16
+											}
+										},
+										{
+											"source": {
+												"name": "Half of Joining",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 17
+											}
+										},
+										{
+											"source": {
+												"name": "Year of Joining",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 18
+											}
+										},
+										{
+											"source": {
+												"name": "Month of Joining",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 19
+											}
+										},
+										{
+											"source": {
+												"name": "Month Name of Joining",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 20
+											}
+										},
+										{
+											"source": {
+												"name": "Short Month",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 21
+											}
+										},
+										{
+											"source": {
+												"name": "Day of Joining",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 22
+											}
+										},
+										{
+											"source": {
+												"name": "DOW of Joining",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 23
+											}
+										},
+										{
+											"source": {
+												"name": "Short DOW",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 24
+											}
+										},
+										{
+											"source": {
+												"name": "Age in Company (Years)",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 25
+											}
+										},
+										{
+											"source": {
+												"name": "Salary",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 26
+											}
+										},
+										{
+											"source": {
+												"name": "Last % Hike",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 27
+											}
+										},
+										{
+											"source": {
+												"name": "SSN",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 28
+											}
+										},
+										{
+											"source": {
+												"name": "Phone No. ",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 29
+											}
+										},
+										{
+											"source": {
+												"name": "Place Name",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 30
+											}
+										},
+										{
+											"source": {
+												"name": "County",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 31
+											}
+										},
+										{
+											"source": {
+												"name": "City",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 32
+											}
+										},
+										{
+											"source": {
+												"name": "State",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 33
+											}
+										},
+										{
+											"source": {
+												"name": "Zip",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 34
+											}
+										},
+										{
+											"source": {
+												"name": "Region",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 35
+											}
+										},
+										{
+											"source": {
+												"name": "User Name",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 36
+											}
+										},
+										{
+											"source": {
+												"name": "Password",
+												"type": "String",
+												"physicalType": "String"
+											},
+											"sink": {
+												"type": "String",
+												"ordinal": 37
+											}
+										}
+									],
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "Input",
+									"type": "DatasetReference"
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "Output",
+									"type": "DatasetReference",
+									"parameters": {
+										"FolderName": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"FolderNames": {
+				"type": "array",
+				"defaultValue": [
+					"Output1",
+					"Output2",
+					"Output3",
+					"Output4",
+					"Output5"
+				]
+			}
+		},
+		"annotations": []
+	}
+}
