@@ -103,7 +103,10 @@
 												"referenceName": "Output",
 												"type": "DatasetReference",
 												"parameters": {
-													"FolderName": "Output22"
+													"FolderName": {
+														"value": "@string(rand(1,10))",
+														"type": "Expression"
+													}
 												}
 											}
 										]
