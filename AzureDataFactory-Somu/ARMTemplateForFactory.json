@@ -533,7 +533,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"expression": {
-								"value": "@greater(activity('Filter1').output.item(),4)",
+								"value": "@greater(activity('Filter1').output.item,4)",
 								"type": "Expression"
 							},
 							"ifTrueActivities": [
